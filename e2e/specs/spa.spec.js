@@ -6,7 +6,7 @@ describe('SPA Regression Test', () => {
 
     beforeEach(async function () {
         browser = await puppeteer.launch({
-            headless: false,
+            headless: true,
             slowMo: 20,
             devtools: false,
             args: ['--start-fullscreen'],
