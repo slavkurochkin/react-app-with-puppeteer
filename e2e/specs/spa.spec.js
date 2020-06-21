@@ -3,6 +3,7 @@ const puppeteer = require('puppeteer');
 describe('SPA Regression Test', () => {
     let browser
     let page
+    let env = "http://localhost:3000"
 
     beforeEach(async function () {
         browser = await puppeteer.launch({
@@ -23,7 +24,7 @@ describe('SPA Regression Test', () => {
     })
 
     it('Launch SPA app', async () => {
-        await page.goto(URL);
+        await page.goto(env);
         await page.screenshot({path: 'local_env.png'});
     })
 })
