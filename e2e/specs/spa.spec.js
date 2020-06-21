@@ -24,7 +24,7 @@ describe('SPA Regression Test', () => {
     })
 
     it('Launch SPA app', async () => {
-        await page.goto(env);
+        await page.goto("http://localhost:3000");
         await page.screenshot({path: 'local_env.png'});
     })
 })
