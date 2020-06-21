@@ -1,0 +1,21 @@
+os: linux
+dist: trusty
+sudo: required
+language: node_js
+node_js:
+  - "stable"
+addons:
+  chrome: stable
+  hostname: localhost
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+before_script:
+  - yarn start &
+cache:
+  yarn: true
+  directories:
+    - node_modules
+install:
+  - yarn install
+script:
+  - yarn e2e
