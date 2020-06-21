@@ -23,7 +23,7 @@ describe('SPA Regression Test', () => {
     })
 
     it('Launch SPA app', async () => {
-        await page.goto(URL);
+        await page.goto(ENV_LOCAL);
         await page.screenshot({path: 'local_env.png'});
     })
 })
