@@ -1,5 +1,5 @@
 module.exports = {
     globals: {
-        ENV_LOCAL: "http://localhost:3000"
+        URL: "http://localhost:3000"
     },
 };
