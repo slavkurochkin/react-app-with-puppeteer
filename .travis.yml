@@ -18,4 +18,4 @@ cache:
 install:
   - yarn install
 script:
-  - sleep 5 && yarn e2e
+  - yarn e2e
